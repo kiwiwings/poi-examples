@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'java-library-distribution'
+}
+
+group 'de.kwiwings'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.apache.poi:poi-ooxml:5.0.0')
+}
+
+distributions {
+    main {
+        contents {
+            from 'src/main/shell'
+        }
+    }
+}
