@@ -3,7 +3,7 @@ plugins {
     id 'java-library-distribution'
 }
 
-group 'de.kwiwings'
+group 'de.kiwiwings'
 version '1.0-SNAPSHOT'
 
 repositories {
