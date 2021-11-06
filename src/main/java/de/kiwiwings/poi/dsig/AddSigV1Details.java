@@ -49,7 +49,6 @@ public class AddSigV1Details {
         SignatureConfig signatureConfig = new SignatureConfig();
         signatureConfig.setKey(key);
         signatureConfig.setSigningCertificateChain(singletonList(x509));
-//        signatureConfig.setXadesRole("Role");
         signatureConfig.setDigestAlgo(HashAlgorithm.sha1);
         signatureConfig.setSignatureDescription("Purpose of signing this document");
         signatureConfig.setSignatureFacets(Arrays.asList(
@@ -58,7 +57,6 @@ public class AddSigV1Details {
             new XAdES2SignatureFacet(),
             new Office2010SignatureFacet()
         ));
-        signatureConfig.setSignatureMarshalListener(new SignatureMarshalDefaultListener());
 
         try (OPCPackage opc = OPCPackage.open(bos.toInputStream())) {
 
